@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47898860-9F07-4100-BA68-2850A6BBFB22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VentaDeCelulares</RootNamespace>
+    <AssemblyName>VentaDeCelulares</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GestiónTipoDeAccesorioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestiónTipoDeAccesorioForm.Designer.cs">
+      <DependentUpon>GestiónTipoDeAccesorioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validar.cs" />
+    <Compile Include="VerClientesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerClientesDialog.Designer.cs">
+      <DependentUpon>VerClientesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestiónDeMarcasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestiónDeMarcasForm.Designer.cs">
+      <DependentUpon>GestiónDeMarcasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestiónDeUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestiónDeUsuariosForm.Designer.cs">
+      <DependentUpon>GestiónDeUsuariosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarSesiónForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IniciarSesiónForm.Designer.cs">
+      <DependentUpon>IniciarSesiónForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerCelularesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerCelularesDialog.Designer.cs">
+      <DependentUpon>VerCelularesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestiónDeCelularesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestiónDeCelularesForm.Designer.cs">
+      <DependentUpon>GestiónDeCelularesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestiónDeAccesoriosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestiónDeAccesoriosForm.Designer.cs">
+      <DependentUpon>GestiónDeAccesoriosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestiónDeClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestiónDeClientesForm.Designer.cs">
+      <DependentUpon>GestiónDeClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerAccesoriosDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerAccesoriosDialog.Designer.cs">
+      <DependentUpon>VerAccesoriosDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerMarcasDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMarcasDialog.Designer.cs">
+      <DependentUpon>VerMarcasDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerTipoDeAccesorioDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerTipoDeAccesorioDialog.Designer.cs">
+      <DependentUpon>VerTipoDeAccesorioDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerUsuariosDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerUsuariosDialog.Designer.cs">
+      <DependentUpon>VerUsuariosDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerVentasDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerVentasDialog.Designer.cs">
+      <DependentUpon>VerVentasDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GestiónDeMarcasForm.resx">
+      <DependentUpon>GestiónDeMarcasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestiónDeUsuariosForm.resx">
+      <DependentUpon>GestiónDeUsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestiónTipoDeAccesorioForm.resx">
+      <DependentUpon>GestiónTipoDeAccesorioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniciarSesiónForm.resx">
+      <DependentUpon>IniciarSesiónForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerCelularesDialog.resx">
+      <DependentUpon>VerCelularesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestiónDeAccesoriosForm.resx">
+      <DependentUpon>GestiónDeAccesoriosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestiónDeClientesForm.resx">
+      <DependentUpon>GestiónDeClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestiónDeCelularesForm.resx">
+      <DependentUpon>GestiónDeCelularesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerAccesoriosDialog.resx">
+      <DependentUpon>VerAccesoriosDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerClientesDialog.resx">
+      <DependentUpon>VerClientesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMarcasDialog.resx">
+      <DependentUpon>VerMarcasDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerTipoDeAccesorioDialog.resx">
+      <DependentUpon>VerTipoDeAccesorioDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerUsuariosDialog.resx">
+      <DependentUpon>VerUsuariosDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerVentasDialog.resx">
+      <DependentUpon>VerVentasDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_SEO-06_2588767.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Jee-05_2180491.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sed-13_2232590.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Rounded-31_2024644.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Myspace_1063061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-40-clipboard-list_315245.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-40-clipboard-list_315245 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-accessories-long-shadow-icon-vectors.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Client_Male_Dark_80823.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_system-users_118828.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74166.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\741661.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{D2838D06-B332-4C3A-BE08-C1D4C221DD17}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{FDB38109-5AE0-43D5-B5AD-99C154FBA68A}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{D91B4FC7-F4F0-4A8D-B903-D200249AE470}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
