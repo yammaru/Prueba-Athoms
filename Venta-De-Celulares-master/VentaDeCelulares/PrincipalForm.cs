@@ -57,6 +57,9 @@ namespace VentaDeCelulares
 
         private void AgregarProducto(Artículo a)
         {
+            if (tb_cantidad.Text=="") { 
+                MessageBox.Show("No hay valor en cantidado"); 
+            } else     {
             int cantidad = int.Parse(tb_cantidad.Text);
             if (a.Cantidad >= cantidad)
             {
@@ -65,6 +68,8 @@ namespace VentaDeCelulares
             }
             else MessageBox.Show("No hay suficientes existencias de este artículo");
             NombreProductoTextBox.Text = a.Nombre;
+            }
+          
         }
 
 
@@ -76,8 +81,7 @@ namespace VentaDeCelulares
 
             Artículo a = null;
 
-            try
-            {
+           
                 if ((a = cl.GetBy("Referencia", RefArtículoTextBox.Text)) != null)
                     AgregarProducto(a);
                 else if ((a = al.GetBy("Referencia", RefArtículoTextBox.Text)) != null)
@@ -86,12 +90,8 @@ namespace VentaDeCelulares
                 {
                     MessageBox.Show("Este artículo no está registrado");
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.StackTrace);
-                MessageBox.Show("Ingrese un valor correcto");
-            }
+          
+           
             
         }
 
@@ -180,40 +180,46 @@ namespace VentaDeCelulares
         private void metroButton1_Click(object sender, EventArgs e)
         {
             CompraLógica cl = new CompraLógica();
-
-            try
+            if (PagoTextBox.Text == "") { MessageBox.Show("No hay suficientes valor en pago"); }
+            else
             {
-                float total = float.Parse(TotalTextBox.Text);
-                float pago = float.Parse(PagoTextBox.Text);
-
-                if (pago < total)
+                try
                 {
-                    MessageBox.Show("Dinero insuficiente");
-                    return;
-                }
-                if (this.c == null)
-                {
-                    MessageBox.Show("Ingrese un cliente");
-                    return;
-                }
-                Compra c = new Compra();
+                    float total = float.Parse(TotalTextBox.Text);
+                    float pago = float.Parse(PagoTextBox.Text);
 
-                c.Id = cl.Count() + 1;
-                c.Fecha = DateTime.Now;
-                c.Cliente = this.c;
-                c.Total = total;
-                c.Artículos = this.productos;
+                    if (pago < total)
+                    {
+                        MessageBox.Show("Dinero insuficiente");
+                        return;
+                    }
+                    if (this.c == null)
+                    {
+                        MessageBox.Show("Ingrese un cliente");
+                        return;
+                    }
+                    Compra c = new Compra();
 
-                if (cl.Insert(c) == 0)
-                {
-                    MessageBox.Show("Error en la compra");
-                } else {
-                    MessageBox.Show("Compra exitosa");
-                    VueltasTextBox.Text = (pago - total).ToString();
+                    c.Id = cl.Count() + 1;
+                    c.Fecha = DateTime.Now;
+                    c.Cliente = this.c;
+                    c.Total = total;
+                    c.Artículos = this.productos;
+
+                    if (cl.Insert(c) == 0)
+                    {
+                        MessageBox.Show("Error en la compra");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Compra exitosa");
+                        VueltasTextBox.Text = (pago - total).ToString();
+                    }
                 }
-            } catch (NoNullAllowedException ex)
-            {
-                MessageBox.Show("Ingrese un pago correcto");
+                catch (NoNullAllowedException ex)
+                {
+                    MessageBox.Show("Ingrese un pago correcto");
+                }
             }
         }
 
