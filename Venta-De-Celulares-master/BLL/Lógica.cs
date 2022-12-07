@@ -21,6 +21,10 @@ namespace BLL
         {
             return Repository.Get(id);
         }
+        public T GetCedula(string id)
+        {
+            return Repository.GetCedula(id);
+        }
 
         public List<T> GetAll()
         {
@@ -39,7 +43,7 @@ namespace BLL
 
         public void Update(T t, int id)
         {
-            Repository.Update(id, t);
+           Repository.Update(id, t);
         }
 
         public T GetBy(string nombre, object valor)

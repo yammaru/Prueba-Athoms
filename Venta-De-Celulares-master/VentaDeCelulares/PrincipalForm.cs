@@ -47,7 +47,7 @@ namespace VentaDeCelulares
 
         public void CargarFecha()
         {
-            FechaLabel.Text = DateTime.Now.ToShortDateString();
+          //  FechaLabel.Text = DateTime.Now.ToShortDateString();
         }
 
         public void CargaConsecutivo()
@@ -138,11 +138,19 @@ namespace VentaDeCelulares
         {
             ClienteRepository cr = new ClienteRepository();
 
-            var c = cr.GetBy("Cédula", CédulaTextBox.Text);
+            var c = cr.GetBy("Teléfono", CédulaTextBox.Text);
 
             if (c == null)
             {
-                Console.WriteLine("Esta persona no está registrada");
+                DialogResult result = MessageBox.Show("Esta persona no está registrada,desea registrarlo?", "Cliente", MessageBoxButtons.OK);
+
+                if (result == DialogResult.OK)
+                {
+                    this.Visible = false;
+                    new GestiónDeClientesForm().Visible = true ;
+                }
+              
+          
             }
             else
             {
@@ -244,6 +252,17 @@ namespace VentaDeCelulares
         private void RefArtículoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new IniciarSesiónForm().Visible = true;
+        }
+
+        private void ConsecutivoLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

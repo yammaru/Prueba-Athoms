@@ -53,6 +53,7 @@
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(150, 20);
             this.NombreTextBox.TabIndex = 5;
+            this.NombreTextBox.TextChanged += new System.EventHandler(this.NombreTextBox_TextChanged);
             this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
             // 
             // ContraseñaTextbox
@@ -108,9 +109,9 @@
             // 
             // b_modificar
             // 
-            this.b_modificar.Location = new System.Drawing.Point(292, 354);
+            this.b_modificar.Location = new System.Drawing.Point(20, 265);
             this.b_modificar.Name = "b_modificar";
-            this.b_modificar.Size = new System.Drawing.Size(75, 23);
+            this.b_modificar.Size = new System.Drawing.Size(104, 38);
             this.b_modificar.TabIndex = 17;
             this.b_modificar.Text = "Modificar";
             this.b_modificar.UseSelectable = true;
@@ -118,9 +119,9 @@
             // 
             // b_eliminar
             // 
-            this.b_eliminar.Location = new System.Drawing.Point(373, 354);
+            this.b_eliminar.Location = new System.Drawing.Point(133, 265);
             this.b_eliminar.Name = "b_eliminar";
-            this.b_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.b_eliminar.Size = new System.Drawing.Size(114, 39);
             this.b_eliminar.TabIndex = 18;
             this.b_eliminar.Text = "Eliminar";
             this.b_eliminar.UseSelectable = true;
@@ -128,9 +129,9 @@
             // 
             // b_registrar
             // 
-            this.b_registrar.Location = new System.Drawing.Point(211, 354);
+            this.b_registrar.Location = new System.Drawing.Point(23, 211);
             this.b_registrar.Name = "b_registrar";
-            this.b_registrar.Size = new System.Drawing.Size(75, 23);
+            this.b_registrar.Size = new System.Drawing.Size(224, 48);
             this.b_registrar.TabIndex = 19;
             this.b_registrar.Text = "Registrar";
             this.b_registrar.UseSelectable = true;
@@ -138,9 +139,9 @@
             // 
             // b_cancelar
             // 
-            this.b_cancelar.Location = new System.Drawing.Point(454, 354);
+            this.b_cancelar.Location = new System.Drawing.Point(23, 309);
             this.b_cancelar.Name = "b_cancelar";
-            this.b_cancelar.Size = new System.Drawing.Size(75, 23);
+            this.b_cancelar.Size = new System.Drawing.Size(224, 39);
             this.b_cancelar.TabIndex = 20;
             this.b_cancelar.Text = "Cancelar";
             this.b_cancelar.UseSelectable = true;
@@ -183,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 382);
+            this.ClientSize = new System.Drawing.Size(539, 373);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RolesComboBox);

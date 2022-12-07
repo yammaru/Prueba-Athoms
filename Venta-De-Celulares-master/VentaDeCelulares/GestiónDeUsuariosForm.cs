@@ -40,19 +40,37 @@ namespace VentaDeCelulares
             Usuario u = new Usuario();
             u.Nombre = NombreTextBox.Text;
             u.Contraseña = ContraseñaTextbox.Text;
-            u.Rol = RolesComboBox.Text.Equals("Administrador") ? 'A' : 'R';
+            u.Rol = RolesComboBox.Text.Equals("Administrador") ? '1' : '2';
             return u;
         }
 
         private void b_registrar_Click(object sender, EventArgs e)
         {
-            if (ur.Insert(GetUsuario()) == 0)
+            if (ContraseñaTextbox.Text == "" || NombreTextBox.Text == "")
             {
-                MessageBox.Show("El registro falló");
+
+                MessageBox.Show("faltan datos");
+
             }
             else
             {
-                MessageBox.Show("Registro exitoso");
+                if (ContraseñaTextbox.Text.Length <= 20 && ContraseñaTextbox.Text.Length >= 8 && NombreTextBox.Text.Length <= 20 && NombreTextBox.Text.Length >= 2)
+                {
+
+                    if (ur.Insert(GetUsuario()) == 0)
+                    {
+                        MessageBox.Show("El registro falló");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro exitoso");
+                    }
+
+                }
+                else { 
+                    MessageBox.Show("los caracteres permitidos en nombre son de 2 a 20, encontraseña son de 8 a 20, porfavor verificar"); 
+                }
+                
             }
         }
 
@@ -104,9 +122,15 @@ namespace VentaDeCelulares
         private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloLetras(e);
+
         }
 
         private void RolesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombreTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

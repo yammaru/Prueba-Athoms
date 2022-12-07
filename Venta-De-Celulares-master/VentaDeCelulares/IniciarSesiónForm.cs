@@ -33,7 +33,15 @@ namespace VentaDeCelulares
                 if (u.Contraseña.Equals(ContraseñaTextBox.Text))
                 {
                     this.Visible = false;
-                    new PrincipalForm().Visible = true;
+                    if (u.Rol.Equals('1'))
+                    {
+
+                        new PrincipalForm().Visible = true;
+                    }
+                    else {
+                        new EmpleadoForm().Visible = true;
+                    }
+                    
                 }
                 else
                 {

@@ -55,7 +55,6 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.ConsecutivoLabel = new MetroFramework.Controls.MetroLabel();
-            this.FechaLabel = new MetroFramework.Controls.MetroLabel();
             this.CédulaTextBox = new MetroFramework.Controls.MetroTextBox();
             this.RefArtículoTextBox = new MetroFramework.Controls.MetroTextBox();
             this.tb_cantidad = new MetroFramework.Controls.MetroTextBox();
@@ -104,28 +103,28 @@
             // celularesToolStripMenuItem
             // 
             this.celularesToolStripMenuItem.Name = "celularesToolStripMenuItem";
-            this.celularesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.celularesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.celularesToolStripMenuItem.Text = "Celulares";
             this.celularesToolStripMenuItem.Click += new System.EventHandler(this.celularesToolStripMenuItem_Click);
             // 
             // accesoriosToolStripMenuItem
             // 
             this.accesoriosToolStripMenuItem.Name = "accesoriosToolStripMenuItem";
-            this.accesoriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.accesoriosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.accesoriosToolStripMenuItem.Text = "Accesorios";
             this.accesoriosToolStripMenuItem.Click += new System.EventHandler(this.accesoriosToolStripMenuItem_Click_1);
             // 
             // tipoDeAccesoriosToolStripMenuItem
             // 
             this.tipoDeAccesoriosToolStripMenuItem.Name = "tipoDeAccesoriosToolStripMenuItem";
-            this.tipoDeAccesoriosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.tipoDeAccesoriosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.tipoDeAccesoriosToolStripMenuItem.Text = "Tipo de accesorios";
             this.tipoDeAccesoriosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeAccesoriosToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
@@ -187,9 +186,9 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(250, 313);
+            this.metroButton1.Location = new System.Drawing.Point(20, 253);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.Size = new System.Drawing.Size(305, 37);
             this.metroButton1.TabIndex = 21;
             this.metroButton1.Text = "Aceptar";
             this.metroButton1.UseSelectable = true;
@@ -197,16 +196,17 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(169, 313);
+            this.metroButton2.Location = new System.Drawing.Point(20, 296);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.Size = new System.Drawing.Size(862, 30);
             this.metroButton2.TabIndex = 22;
-            this.metroButton2.Text = "Cancelar";
+            this.metroButton2.Text = "Volver";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(298, 201);
+            this.metroButton3.Location = new System.Drawing.Point(298, 166);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(27, 23);
             this.metroButton3.TabIndex = 23;
@@ -217,7 +217,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(688, 257);
+            this.metroLabel1.Location = new System.Drawing.Point(331, 259);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(36, 19);
             this.metroLabel1.TabIndex = 24;
@@ -226,7 +226,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(688, 286);
+            this.metroLabel2.Location = new System.Drawing.Point(514, 259);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(39, 19);
             this.metroLabel2.TabIndex = 25;
@@ -235,7 +235,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(688, 315);
+            this.metroLabel3.Location = new System.Drawing.Point(700, 259);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(49, 19);
             this.metroLabel3.TabIndex = 26;
@@ -244,7 +244,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(14, 234);
+            this.metroLabel4.Location = new System.Drawing.Point(14, 199);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(59, 19);
             this.metroLabel4.TabIndex = 27;
@@ -253,7 +253,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(14, 205);
+            this.metroLabel5.Location = new System.Drawing.Point(14, 170);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(142, 19);
             this.metroLabel5.TabIndex = 28;
@@ -262,38 +262,30 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(14, 176);
+            this.metroLabel6.Location = new System.Drawing.Point(14, 141);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(126, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(103, 19);
             this.metroLabel6.TabIndex = 29;
-            this.metroLabel6.Text = "Nombre Del Cliente";
+            this.metroLabel6.Text = "Nombre Cliente";
             // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(14, 143);
+            this.metroLabel7.Location = new System.Drawing.Point(14, 108);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(156, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(102, 19);
             this.metroLabel7.TabIndex = 30;
-            this.metroLabel7.Text = "Identificacion Del Cliente ";
+            this.metroLabel7.Text = "Telefono Cliente";
             // 
             // ConsecutivoLabel
             // 
             this.ConsecutivoLabel.AutoSize = true;
-            this.ConsecutivoLabel.Location = new System.Drawing.Point(14, 101);
+            this.ConsecutivoLabel.Location = new System.Drawing.Point(832, 30);
             this.ConsecutivoLabel.Name = "ConsecutivoLabel";
             this.ConsecutivoLabel.Size = new System.Drawing.Size(30, 19);
             this.ConsecutivoLabel.TabIndex = 31;
             this.ConsecutivoLabel.Text = "000";
-            // 
-            // FechaLabel
-            // 
-            this.FechaLabel.AutoSize = true;
-            this.FechaLabel.Location = new System.Drawing.Point(123, 101);
-            this.FechaLabel.Name = "FechaLabel";
-            this.FechaLabel.Size = new System.Drawing.Size(69, 38);
-            this.FechaLabel.TabIndex = 32;
-            this.FechaLabel.Text = "17/10/2017\r\n";
+            this.ConsecutivoLabel.Click += new System.EventHandler(this.ConsecutivoLabel_Click);
             // 
             // CédulaTextBox
             // 
@@ -310,7 +302,7 @@
             this.CédulaTextBox.CustomButton.UseSelectable = true;
             this.CédulaTextBox.CustomButton.Visible = false;
             this.CédulaTextBox.Lines = new string[0];
-            this.CédulaTextBox.Location = new System.Drawing.Point(176, 143);
+            this.CédulaTextBox.Location = new System.Drawing.Point(176, 108);
             this.CédulaTextBox.MaxLength = 32767;
             this.CédulaTextBox.Name = "CédulaTextBox";
             this.CédulaTextBox.PasswordChar = '\0';
@@ -341,7 +333,7 @@
             this.RefArtículoTextBox.CustomButton.UseSelectable = true;
             this.RefArtículoTextBox.CustomButton.Visible = false;
             this.RefArtículoTextBox.Lines = new string[0];
-            this.RefArtículoTextBox.Location = new System.Drawing.Point(176, 201);
+            this.RefArtículoTextBox.Location = new System.Drawing.Point(176, 166);
             this.RefArtículoTextBox.MaxLength = 32767;
             this.RefArtículoTextBox.Name = "RefArtículoTextBox";
             this.RefArtículoTextBox.PasswordChar = '\0';
@@ -372,7 +364,7 @@
             this.tb_cantidad.CustomButton.UseSelectable = true;
             this.tb_cantidad.CustomButton.Visible = false;
             this.tb_cantidad.Lines = new string[0];
-            this.tb_cantidad.Location = new System.Drawing.Point(176, 259);
+            this.tb_cantidad.Location = new System.Drawing.Point(176, 224);
             this.tb_cantidad.MaxLength = 32767;
             this.tb_cantidad.Name = "tb_cantidad";
             this.tb_cantidad.PasswordChar = '\0';
@@ -403,7 +395,7 @@
             this.VueltasTextBox.CustomButton.UseSelectable = true;
             this.VueltasTextBox.CustomButton.Visible = false;
             this.VueltasTextBox.Lines = new string[0];
-            this.VueltasTextBox.Location = new System.Drawing.Point(764, 311);
+            this.VueltasTextBox.Location = new System.Drawing.Point(763, 257);
             this.VueltasTextBox.MaxLength = 32767;
             this.VueltasTextBox.Name = "VueltasTextBox";
             this.VueltasTextBox.PasswordChar = '\0';
@@ -433,7 +425,7 @@
             this.PagoTextBox.CustomButton.UseSelectable = true;
             this.PagoTextBox.CustomButton.Visible = false;
             this.PagoTextBox.Lines = new string[0];
-            this.PagoTextBox.Location = new System.Drawing.Point(764, 282);
+            this.PagoTextBox.Location = new System.Drawing.Point(567, 257);
             this.PagoTextBox.MaxLength = 32767;
             this.PagoTextBox.Name = "PagoTextBox";
             this.PagoTextBox.PasswordChar = '\0';
@@ -464,7 +456,7 @@
             this.TotalTextBox.CustomButton.Visible = false;
             this.TotalTextBox.Lines = new string[] {
         "0"};
-            this.TotalTextBox.Location = new System.Drawing.Point(764, 253);
+            this.TotalTextBox.Location = new System.Drawing.Point(381, 257);
             this.TotalTextBox.MaxLength = 32767;
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.PasswordChar = '\0';
@@ -495,7 +487,7 @@
             this.NombreTextBox.CustomButton.UseSelectable = true;
             this.NombreTextBox.CustomButton.Visible = false;
             this.NombreTextBox.Lines = new string[0];
-            this.NombreTextBox.Location = new System.Drawing.Point(176, 172);
+            this.NombreTextBox.Location = new System.Drawing.Point(176, 137);
             this.NombreTextBox.MaxLength = 32767;
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.PasswordChar = '\0';
@@ -526,7 +518,7 @@
             this.NombreProductoTextBox.CustomButton.UseSelectable = true;
             this.NombreProductoTextBox.CustomButton.Visible = false;
             this.NombreProductoTextBox.Lines = new string[0];
-            this.NombreProductoTextBox.Location = new System.Drawing.Point(176, 230);
+            this.NombreProductoTextBox.Location = new System.Drawing.Point(176, 195);
             this.NombreProductoTextBox.MaxLength = 32767;
             this.NombreProductoTextBox.Name = "NombreProductoTextBox";
             this.NombreProductoTextBox.PasswordChar = '\0';
@@ -545,7 +537,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(14, 263);
+            this.metroLabel10.Location = new System.Drawing.Point(14, 228);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(62, 19);
             this.metroLabel10.TabIndex = 41;
@@ -553,7 +545,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(298, 143);
+            this.button1.Location = new System.Drawing.Point(298, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 23);
             this.button1.TabIndex = 42;
@@ -565,7 +557,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 349);
+            this.ClientSize = new System.Drawing.Size(894, 340);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.NombreProductoTextBox);
@@ -576,7 +568,6 @@
             this.Controls.Add(this.tb_cantidad);
             this.Controls.Add(this.RefArtículoTextBox);
             this.Controls.Add(this.CédulaTextBox);
-            this.Controls.Add(this.FechaLabel);
             this.Controls.Add(this.ConsecutivoLabel);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel6);
@@ -621,7 +612,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel ConsecutivoLabel;
-        private MetroFramework.Controls.MetroLabel FechaLabel;
         private MetroFramework.Controls.MetroTextBox CédulaTextBox;
         private MetroFramework.Controls.MetroTextBox RefArtículoTextBox;
         private MetroFramework.Controls.MetroTextBox tb_cantidad;

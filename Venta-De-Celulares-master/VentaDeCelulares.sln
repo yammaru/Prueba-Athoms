@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaDeCelulares", "VentaDeCelulares\VentaDeCelulares.csproj", "{47898860-9F07-4100-BA68-2850A6BBFB22}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{FDB38109-5AE0-43D5-B5AD-99C154FBA68A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{D2838D06-B332-4C3A-BE08-C1D4C221DD17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLLTests", "BLLTests\BLLTests.csproj", "{EF11B8FE-9211-4DD3-B158-4FA01475C47E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D2838D06-B332-4C3A-BE08-C1D4C221DD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2838D06-B332-4C3A-BE08-C1D4C221DD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2838D06-B332-4C3A-BE08-C1D4C221DD17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF11B8FE-9211-4DD3-B158-4FA01475C47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF11B8FE-9211-4DD3-B158-4FA01475C47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF11B8FE-9211-4DD3-B158-4FA01475C47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF11B8FE-9211-4DD3-B158-4FA01475C47E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

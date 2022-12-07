@@ -101,6 +101,45 @@ namespace DAL
                 return found ? result : default(T);
             }
         }
+        public T GetCedula(string key)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                SqlCommand comm = new SqlCommand
+                {
+                    Connection = conn,
+                    CommandText = "SELECT * FROM " + tableName + " WHERE Cédula=@Id"
+                };
+                comm.Parameters.AddWithValue("Id", key);
+                SqlDataReader reader = comm.ExecuteReader(System.Data.CommandBehavior.SingleResult);
+                T result = new T();
+
+                bool found = false;
+                try
+                {
+                    while (reader.Read())
+                    {
+                        found = true;
+                        result = ToObject(reader);
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.StackTrace);
+                    result = default(T);
+                }
+                finally
+                {
+                    if (!reader.IsClosed) reader.Close();
+                    conn.Close();
+                }
+
+                return found ? result : default(T);
+            }
+        }
 
         public List<T> GetAll()
         {
