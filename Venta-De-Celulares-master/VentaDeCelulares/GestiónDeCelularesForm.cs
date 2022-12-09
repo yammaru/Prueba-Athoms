@@ -22,6 +22,7 @@ namespace VentaDeCelulares
             CargarMarcas();
             CargarColores();
             CargarTipos();
+            cargarTabla();
         }
 
         private void bt_volver_Click(object sender, EventArgs e)
@@ -44,9 +45,10 @@ namespace VentaDeCelulares
             ColorLógica cl = new ColorLógica();
             IList<Entity.Color> colores = cl.GetAll();
 
-            ColoresComboBox.DataSource = colores;
+        /*    ColoresComboBox.DataSource = colores;
             ColoresComboBox.DisplayMember = "Nombre";
             ColoresComboBox.ValueMember = "Id";
+        */
         }
 
         private void CargarTipos()
@@ -61,12 +63,31 @@ namespace VentaDeCelulares
 
         private void Bt_registrar_Click(object sender, EventArgs e)
         {
-            if (cl.Insert(GetCelular()) == 0) MessageBox.Show("Error registrado");
-            else
+            Celular c = cl.GetBy("cantidad", ReferenciaTextBox.Text);
+
+            if (c == null)
             {
-                MessageBox.Show("Registro exitoso");
-                LimpiarCampos();
+
+                if (cl.Insert(GetCelular()) == 0) { 
+                    MessageBox.Show("Error registrado"); 
+                }
+                else
+                {
+                    MessageBox.Show("Registro exitoso");
+                    LimpiarCampos();
+                    cargarTabla();
+                }
             }
+           /* else
+            {
+                if (cl.Delete(c.Id) == 0) MessageBox.Show("La eliminación falló");
+                else
+                {
+                    MessageBox.Show("Eliminación correcta");
+                    LimpiarCampos();
+                }
+            }
+           */
         }
 
         private void LimpiarCampos()
@@ -80,9 +101,9 @@ namespace VentaDeCelulares
             ResoluciónTextBox.Text = "";
         }
 
-        private void MetroButton1_Click(object sender, EventArgs e)
+     /*   private void MetroButton1_Click(object sender, EventArgs e)
         {
-            Celular c = cl.GetBy("Referencia", ReferenciaTextBox.Text);
+            Celular c = cl.GetBy("cantidad", ReferenciaTextBox.Text);
 
             if (c == null) MessageBox.Show("El celular con esta referencia no existe");
             else
@@ -93,9 +114,9 @@ namespace VentaDeCelulares
                     LimpiarCampos();
                 }
             }
-        }
+        }*/
 
-        private void MetroButton2_Click(object sender, EventArgs e)
+       /* private void MetroButton2_Click(object sender, EventArgs e)
         {
             Celular c = cl.GetBy("Referencia", ReferenciaTextBox.Text);
             if (c == null) MessageBox.Show("Este celular no existe");
@@ -106,13 +127,13 @@ namespace VentaDeCelulares
                 PrecioTextBox.Text = c.Precio.ToString();
                 CantidadTextBox.Text = c.Cantidad.ToString();
                 MarcaComboBox.SelectedValue = c.Marca.Id;
-                ColoresComboBox.SelectedValue = c.Color.Id;
+              
                 TipoComboBox.SelectedText = c.Tipo == TipoDeCelular.INTELIGENTE ? "Inteligente" : "Regular";
                 AlmacenamientoTextBox.Text = c.Almacenamiento.ToString();
                 RamTextBox.Text = c.RAM.ToString();
                 ResoluciónTextBox.Text = c.MegapixelesEnLaCámara.ToString();
             }
-        }
+        }*/
 
         private Celular GetCelular()
         {
@@ -132,7 +153,7 @@ namespace VentaDeCelulares
             c.Tipo = TipoComboBox.SelectedText == "Inteligente" ? TipoDeCelular.INTELIGENTE : TipoDeCelular.REGULAR;
             c.Precio = int.Parse(PrecioTextBox.Text);
             c.Marca = mc.Get(int.Parse(MarcaComboBox.SelectedValue.ToString()));
-            c.Color = lc.Get(int.Parse(ColoresComboBox.SelectedValue.ToString()));
+            c.Color = lc.Get(1);
 
             return c;
         }
@@ -198,6 +219,121 @@ namespace VentaDeCelulares
         private void MarcaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void cargarTabla()
+        {
+            CelularLógica cl = new CelularLógica();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Imei");
+            dt.Columns.Add("Referencia");
+            dt.Columns.Add("Nombre");
+            dt.Columns.Add("Precio");
+            dt.Columns.Add("Descripción");
+            dt.Columns.Add("Marca");
+            dt.Columns.Add("Almacenamiento");
+            dt.Columns.Add("RAM");
+            dt.Columns.Add("Resolución");
+            dt.Columns.Add("Tipo");
+            foreach (var oItem in cl.GetAll())
+            {
+                dt.Rows.Add(new object[] {oItem.Cantidad, oItem.Referencia, oItem.Nombre,
+                oItem.Precio, oItem.Descripción,  oItem.Marca.Nombre,
+                oItem.Almacenamiento, oItem.RAM, oItem.MegapixelesEnLaCámara, oItem.Tipo == Entity.TipoDeCelular.INTELIGENTE ? "Inteligente" : "Regular" });
+            }
+            dataGridView1.DataSource = dt;
+        }
+
+        private void GestiónDeCelularesForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CantidadTextBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Marca_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TipoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResoluciónTextBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RamTextBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlmacenamientoTextBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+        string imei;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name=="editar")
+            {
+                imei = dataGridView1.CurrentRow.Cells["imei"].Value.ToString();
+                fr_celulares fr = new fr_celulares(imei);
+                fr.ShowDialog();
+                cargarTabla();
+            }
+          
         }
     }
 }

@@ -130,6 +130,9 @@
   <data name="if_Rounded-31_2024644" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_Rounded-31_2024644.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="741661" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\741661.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="descarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,7 +163,10 @@
   <data name="if_Client_Male_Dark_80823" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_Client_Male_Dark_80823.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="741661" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\741661.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="88666" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\88666.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editar-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar-01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

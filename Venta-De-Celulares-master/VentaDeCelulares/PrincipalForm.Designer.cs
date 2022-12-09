@@ -33,8 +33,6 @@
             this.gestiónClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.celularesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accesoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeAccesoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,8 +91,6 @@
             // 
             this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.celularesToolStripMenuItem,
-            this.accesoriosToolStripMenuItem,
-            this.tipoDeAccesoriosToolStripMenuItem,
             this.marcaToolStripMenuItem});
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
             this.artículosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
@@ -103,28 +99,14 @@
             // celularesToolStripMenuItem
             // 
             this.celularesToolStripMenuItem.Name = "celularesToolStripMenuItem";
-            this.celularesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.celularesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.celularesToolStripMenuItem.Text = "Celulares";
             this.celularesToolStripMenuItem.Click += new System.EventHandler(this.celularesToolStripMenuItem_Click);
-            // 
-            // accesoriosToolStripMenuItem
-            // 
-            this.accesoriosToolStripMenuItem.Name = "accesoriosToolStripMenuItem";
-            this.accesoriosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.accesoriosToolStripMenuItem.Text = "Accesorios";
-            this.accesoriosToolStripMenuItem.Click += new System.EventHandler(this.accesoriosToolStripMenuItem_Click_1);
-            // 
-            // tipoDeAccesoriosToolStripMenuItem
-            // 
-            this.tipoDeAccesoriosToolStripMenuItem.Name = "tipoDeAccesoriosToolStripMenuItem";
-            this.tipoDeAccesoriosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.tipoDeAccesoriosToolStripMenuItem.Text = "Tipo de accesorios";
-            this.tipoDeAccesoriosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeAccesoriosToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
@@ -627,8 +609,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.ToolStripMenuItem celularesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accesoriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoDeAccesoriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
         private System.Windows.Forms.Button button1;
     }

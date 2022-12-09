@@ -51,7 +51,7 @@
             // 
             this.NombreTextBox.Location = new System.Drawing.Point(111, 114);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(150, 20);
+            this.NombreTextBox.Size = new System.Drawing.Size(136, 20);
             this.NombreTextBox.TabIndex = 5;
             this.NombreTextBox.TextChanged += new System.EventHandler(this.NombreTextBox_TextChanged);
             this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
@@ -60,7 +60,7 @@
             // 
             this.ContraseñaTextbox.Location = new System.Drawing.Point(111, 140);
             this.ContraseñaTextbox.Name = "ContraseñaTextbox";
-            this.ContraseñaTextbox.Size = new System.Drawing.Size(150, 20);
+            this.ContraseñaTextbox.Size = new System.Drawing.Size(136, 20);
             this.ContraseñaTextbox.TabIndex = 6;
             // 
             // menuStrip1
@@ -109,9 +109,9 @@
             // 
             // b_modificar
             // 
-            this.b_modificar.Location = new System.Drawing.Point(20, 265);
+            this.b_modificar.Location = new System.Drawing.Point(23, 265);
             this.b_modificar.Name = "b_modificar";
-            this.b_modificar.Size = new System.Drawing.Size(104, 38);
+            this.b_modificar.Size = new System.Drawing.Size(101, 38);
             this.b_modificar.TabIndex = 17;
             this.b_modificar.Text = "Modificar";
             this.b_modificar.UseSelectable = true;
@@ -156,7 +156,7 @@
             "Cajero"});
             this.RolesComboBox.Location = new System.Drawing.Point(111, 166);
             this.RolesComboBox.Name = "RolesComboBox";
-            this.RolesComboBox.Size = new System.Drawing.Size(150, 29);
+            this.RolesComboBox.Size = new System.Drawing.Size(136, 29);
             this.RolesComboBox.TabIndex = 21;
             this.RolesComboBox.UseSelectable = true;
             this.RolesComboBox.SelectedIndexChanged += new System.EventHandler(this.RolesComboBox_SelectedIndexChanged);
@@ -202,6 +202,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GestiónDeUsuariosForm";
             this.Text = "Gestión de usuarios";
+            this.Load += new System.EventHandler(this.GestiónDeUsuariosForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

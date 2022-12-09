@@ -97,5 +97,10 @@ namespace VentaDeCelulares
         {
             Validar.SoloLetras(e);
         }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

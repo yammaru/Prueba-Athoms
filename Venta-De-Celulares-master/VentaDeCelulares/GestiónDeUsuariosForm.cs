@@ -134,5 +134,10 @@ namespace VentaDeCelulares
         {
 
         }
+
+        private void GestiónDeUsuariosForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

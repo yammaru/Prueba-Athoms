@@ -36,10 +36,10 @@ namespace VentaDeCelulares
                     if (u.Rol.Equals('1'))
                     {
 
-                        new PrincipalForm().Visible = true;
+                        new PrincipalForm().ShowDialog();
                     }
                     else {
-                        new EmpleadoForm().Visible = true;
+                        new EmpleadoForm().ShowDialog();
                     }
                     
                 }

@@ -284,5 +284,11 @@
       <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\88666.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-01.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
