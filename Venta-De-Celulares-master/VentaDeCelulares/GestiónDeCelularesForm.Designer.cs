@@ -57,6 +57,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,9 +88,9 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(339, 193);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(142, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(100, 19);
             this.metroLabel3.TabIndex = 15;
-            this.metroLabel3.Text = "Resolucion De Camara";
+            this.metroLabel3.Text = "MP De Camara";
             this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
             // 
             // metroLabel5
@@ -276,6 +277,7 @@
             this.ReferenciaTextBox.UseSelectable = true;
             this.ReferenciaTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.ReferenciaTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ReferenciaTextBox.Click += new System.EventHandler(this.ReferenciaTextBox_Click);
             this.ReferenciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ReferenciaTextBox_KeyPress);
             // 
             // metroLabel8
@@ -378,6 +380,7 @@
             this.DescripciónTextBox.UseSelectable = true;
             this.DescripciónTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.DescripciónTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.DescripciónTextBox.Click += new System.EventHandler(this.DescripciónTextBox_Click);
             this.DescripciónTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciónTextBox_KeyPress);
             // 
             // metroLabel9
@@ -394,9 +397,9 @@
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.Location = new System.Drawing.Point(23, 195);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(55, 19);
             this.metroLabel10.TabIndex = 34;
-            this.metroLabel10.Text = "Descripción";
+            this.metroLabel10.Text = "pantalla";
             // 
             // metroLabel11
             // 
@@ -499,13 +502,30 @@
             // 
             this.dataGridViewImageColumn1.HeaderText = "editar";
             this.dataGridViewImageColumn1.Image = global::VentaDeCelulares.Properties.Resources.editar_01;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 40;
             // 
             // dataGridViewImageColumn2
             // 
             this.dataGridViewImageColumn2.HeaderText = "eliminar";
             this.dataGridViewImageColumn2.Image = global::VentaDeCelulares.Properties.Resources._88666;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 45;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackgroundImage = global::VentaDeCelulares.Properties.Resources.la_limpieza_de_la_casa_mantiene_el_logotipo_98776391;
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton1.Location = new System.Drawing.Point(275, 63);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(58, 56);
+            this.metroButton1.TabIndex = 48;
+            this.metroButton1.Text = "Limpiar";
+            this.metroButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // editar
             // 
@@ -528,6 +548,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 472);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TipoComboBox);
             this.Controls.Add(this.metroLabel13);
@@ -596,5 +617,6 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

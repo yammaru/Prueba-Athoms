@@ -52,7 +52,7 @@ namespace VentaDeCelulares
 
         public void CargaConsecutivo()
         {
-            ConsecutivoLabel.Text = new CompraLógica().Count().ToString();
+            ConsecutivoLabel.Text = "Factura N° "+ new CompraLógica().Count().ToString();
         }
 
         private void AgregarProducto(Artículo a)
@@ -77,19 +77,19 @@ namespace VentaDeCelulares
         private void MetroButton3_Click(object sender, EventArgs e)
         {
             CelularLógica cl = new CelularLógica();
-            AccesorioLógica al = new AccesorioLógica();
+        
 
             Artículo a = null;
 
-           
-                if ((a = cl.GetBy("Referencia", RefArtículoTextBox.Text)) != null)
-                    AgregarProducto(a);
-                else if ((a = al.GetBy("Referencia", RefArtículoTextBox.Text)) != null)
-                    AgregarProducto(a);
-                else
-                {
-                    MessageBox.Show("Este artículo no está registrado");
-                }
+
+            if ((a = cl.GetBy("Referencia", RefArtículoTextBox.Text)) != null)
+            {
+                AgregarProducto(a);
+            }
+            else
+            {
+                MessageBox.Show("Este artículo no está registrado");
+            }
           
            
             
@@ -135,27 +135,37 @@ namespace VentaDeCelulares
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            ClienteRepository cr = new ClienteRepository();
 
+        {
+            if(CédulaTextBox.Text != ""){
+ ClienteRepository cr = new ClienteRepository();
             var c = cr.GetBy("Teléfono", CédulaTextBox.Text);
 
             if (c == null)
             {
-                DialogResult result = MessageBox.Show("Esta persona no está registrada,desea registrarlo?", "Cliente", MessageBoxButtons.OK);
+                DialogResult result = MessageBox.Show("Esta persona no está registrada,desea registrarlo?", "Cliente", MessageBoxButtons.OKCancel);
 
-                if (result == DialogResult.OK)
-                {
-                    this.Visible = false;
-                    new GestiónDeClientesForm().Visible = true ;
+                    if (result == DialogResult.OK)
+                    {
+                        this.Visible = false;
+                        new GestiónDeClientesForm().Visible = true;
+                    }
+                    if (result == DialogResult.Cancel)
+                    {
+                        this.Visible = false;
+                     
+                    }
                 }
-              
-          
-            }
             else
             {
                 this.c = c;
                 NombreTextBox.Text = c.Nombres + " " + c.PrimerApellido;
+            }
+            }
+
+            else
+            {
+                MessageBox.Show("No hay datos...");
             }
         }
 

@@ -63,21 +63,98 @@ namespace VentaDeCelulares
 
         private void Bt_registrar_Click(object sender, EventArgs e)
         {
-            Celular c = cl.GetBy("cantidad", ReferenciaTextBox.Text);
-
-            if (c == null)
+            if (
+                    NombreTextBox.Text != ""&&
+                    DescripciónTextBox.Text != ""&&
+                    PrecioTextBox.Text != ""&&
+                    CantidadTextBox.Text != ""&&
+                    AlmacenamientoTextBox.Text != ""&&
+                    RamTextBox.Text !=""&&
+                    ResoluciónTextBox.Text !=""
+                )
             {
+                if (CantidadTextBox.Text.Length > 10 || CantidadTextBox.Text.Length < 1)
+                {
 
-                if (cl.Insert(GetCelular()) == 0) { 
-                    MessageBox.Show("Error registrado"); 
+                  
+                    MessageBox.Show("nos se puede mas de 10 caracteres ni menos de 1");
+
                 }
                 else
                 {
-                    MessageBox.Show("Registro exitoso");
-                    LimpiarCampos();
-                    cargarTabla();
-                }
+                    if (AlmacenamientoTextBox.Text.Length > 4 || AlmacenamientoTextBox.Text.Length < 1)
+                    {
+
+
+                        MessageBox.Show("el almacenamiento deben estar entra 1 y 9999");
+
+                    }
+                    else
+                    {
+
+                        if ( ResoluciónTextBox.Text.Length > 3 || ResoluciónTextBox.Text.Length <= 1)
+                        {
+
+
+                            MessageBox.Show("los MP de la camara deben estar entra 1 y 999");
+
+                        }
+                        else
+                        {
+                            if (PrecioTextBox.Text.Length > 7 || PrecioTextBox.Text.Length < 1)
+                            {
+
+
+                                MessageBox.Show("nos se puede un valor mas de 9999999 caracteres ni menos de 1");
+                               
+                            }
+                            else
+                            {
+                                if (RamTextBox.Text.Length > 2 || RamTextBox.Text.Length < 1)
+                                {
+
+
+                                    MessageBox.Show("nos se puede ram mas de 99 caracteres ni menos de 1");
+
+                                }
+                                else
+                                {
+                                    if (DescripciónTextBox.Text.Length > 4 || DescripciónTextBox.Text.Length < 1)
+                                    {
+
+
+                                        MessageBox.Show("nos se puede una pantalla mas de 9999 caracteres ni menos de 1");
+
+                                    }
+                                    else
+                                    {
+                                        Celular c = cl.GetBy("cantidad", CantidadTextBox.Text);
+
+                                        if (c == null)
+                                        {
+
+                                            if (cl.Insert(GetCelular()) == 0) { 
+                                                MessageBox.Show("Error registrado"); 
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Registro exitoso");
+                                                LimpiarCampos();
+                                                cargarTabla();
+                                            }
+                                        }
+                                    }  
+                                }
+                            }
+                        }
+                    }
+                } 
             }
+            else
+            {
+                MessageBox.Show("Faltan Datos");
+            }
+        
            /* else
             {
                 if (cl.Delete(c.Id) == 0) MessageBox.Show("La eliminación falló");
@@ -99,9 +176,10 @@ namespace VentaDeCelulares
             AlmacenamientoTextBox.Text = "";
             RamTextBox.Text = "";
             ResoluciónTextBox.Text = "";
+            ReferenciaTextBox.Text = "";
         }
 
-     /*   private void MetroButton1_Click(object sender, EventArgs e)
+          /*   private void MetroButton1_Click(object sender, EventArgs e)
         {
             Celular c = cl.GetBy("cantidad", ReferenciaTextBox.Text);
 
@@ -116,7 +194,7 @@ namespace VentaDeCelulares
             }
         }*/
 
-       /* private void MetroButton2_Click(object sender, EventArgs e)
+          /* private void MetroButton2_Click(object sender, EventArgs e)
         {
             Celular c = cl.GetBy("Referencia", ReferenciaTextBox.Text);
             if (c == null) MessageBox.Show("Este celular no existe");
@@ -198,10 +276,18 @@ namespace VentaDeCelulares
 
         private void CantidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.SoloNumeros(e);
+             Validar.SoloNumeros(e);
+
+           if (CantidadTextBox.Text.Length > 10)
+            {
+
+                e.Handled = true;
+                MessageBox.Show("nos se puede mas de 8 caracteres");
+
+            }
         }
 
-        private void AlmacenamientoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+            private void AlmacenamientoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
         }
@@ -229,7 +315,7 @@ namespace VentaDeCelulares
             dt.Columns.Add("Referencia");
             dt.Columns.Add("Nombre");
             dt.Columns.Add("Precio");
-            dt.Columns.Add("Descripción");
+            dt.Columns.Add("Pantalla");
             dt.Columns.Add("Marca");
             dt.Columns.Add("Almacenamiento");
             dt.Columns.Add("RAM");
@@ -334,6 +420,21 @@ namespace VentaDeCelulares
                 cargarTabla();
             }
           
+        }
+
+        private void DescripciónTextBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void ReferenciaTextBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

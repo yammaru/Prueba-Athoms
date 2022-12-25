@@ -142,6 +142,7 @@
             this.CédulaTextBox.UseSelectable = true;
             this.CédulaTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.CédulaTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.CédulaTextBox.Click += new System.EventHandler(this.CédulaTextBox_Click);
             this.CédulaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CédulaTextBox_KeyPress);
             // 
             // NombresTextBox

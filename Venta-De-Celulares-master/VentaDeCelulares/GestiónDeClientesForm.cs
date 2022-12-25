@@ -103,7 +103,7 @@ namespace VentaDeCelulares
         private void MetroButton1_Click(object sender, EventArgs e)
         {
             Cliente c = null;
-            c = cl.GetCedula(CédulaTextBox.Text);
+            c = cl.GetBy("Teléfono",CédulaTextBox.Text);
             if (c == null)
             {
                 MessageBox.Show("Este cliente no está registrado");
@@ -227,6 +227,11 @@ namespace VentaDeCelulares
         private void metroButton6_Click(object sender, EventArgs e)
         {
             LimpiarCampo();
+        }
+
+        private void CédulaTextBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

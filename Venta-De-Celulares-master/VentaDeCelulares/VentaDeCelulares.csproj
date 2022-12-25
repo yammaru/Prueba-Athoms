@@ -290,5 +290,8 @@
   <ItemGroup>
     <None Include="Resources\editar-01.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\la-limpieza-de-la-casa-mantiene-el-logotipo-98776391.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

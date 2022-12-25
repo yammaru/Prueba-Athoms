@@ -213,6 +213,16 @@ namespace VentaDeCelulares.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap la_limpieza_de_la_casa_mantiene_el_logotipo_98776391 {
+            get {
+                object obj = ResourceManager.GetObject("la-limpieza-de-la-casa-mantiene-el-logotipo-98776391", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man__1_ {
             get {
                 object obj = ResourceManager.GetObject("man (1)", resourceCulture);
